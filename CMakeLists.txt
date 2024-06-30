@@ -29,7 +29,7 @@ target_include_directories(finance PUBLIC ${PROJECT_SOURCE_DIR}/include)
 # Add the examples_cc directory
 add_subdirectory(examples_cc)
 
-# Install the my_library
+# Install the finance
 install(TARGETS finance
         ARCHIVE DESTINATION lib
         LIBRARY DESTINATION lib
