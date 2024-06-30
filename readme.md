@@ -226,13 +226,12 @@ This will generate a package (e.g., a** **`.tar.gz` file or** **`.zip` file) tha
 
 The generated package can be distributed and used on other systems. Recipients can extract the package and find the executables in the** **`bin` directory, the libraries in the** **`lib` directory, and the headers in the** **`include` directory.
 
-There are two files to distribute,
+There is a single file which include the archive embedded to distribute,
 
 MacOS:
 
 ```
 finance-1.0-Darwin.sh
-finance-1.0-Darwin.tar.gz
 ```
 
 Windows
