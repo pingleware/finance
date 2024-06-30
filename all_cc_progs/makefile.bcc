@@ -1,0 +1,22 @@
+OBJS = bonds_yield.obj \
+       bonds_price_both.obj \
+       bonds_price.obj \
+       bonds_price_discrete.obj \
+       bonds_price_termstru.obj \ 
+       bonds_yield.obj \
+       bonds_yield_discrete.obj \
+       term_structure_class_flat.obj
+
+all: finance.lib
+
+finance.lib: $(OBJS)
+   tlib finance.lib -+bonds_yield.obj  -+bonds_price_both.obj  -+bonds_price.obj  -+bonds_price_discrete.obj   -+bonds_price_termstru.obj  -+bonds_yield.obj  -+bonds_yield_discrete.obj -+term_structure_class_flat.obj , finance.lis
+
+bonds_yield.obj: bonds_yield.cc
+bonds_price_both.obj: bonds_price_both.cc
+bonds_price.obj: bonds_price.cc
+bonds_price_discrete.obj: bonds_price_discrete.cc
+bonds_price_termstru.obj: bonds_price_termstru.cc
+bonds_yield.obj: bonds_yield.cc
+bonds_yield_discrete.obj: bonds_yield_discrete.cc
+term_structure_class_flat.obj: term_structure_class_flat.cc

@@ -1,0 +1,65 @@
+Source: newmat
+Priority: optional
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders: Philippe Coval <rzr@gna.org>
+Build-Depends: debhelper (>= 6.0.0), autotools-dev, automake | automaken , autoconf (>> 2.13), libtool , libltdl7-dev | libltdl-dev, quilt
+Standards-Version: 3.9.8
+Section: libs
+Homepage: http://www.robertnz.net/nm_intro.htm
+Vcs-Git: https://anonscm.debian.org/git/debian-science/packages/newmat
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/newmat
+
+Package: libnewmat10ldbl
+Provides: libnewmat
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Breaks: libnewmat10 (<<1.10.4-3)
+Description: matrix manipulations library (C++)
+ Newmat library is intended for scientists and engineers
+ who need to manipulate a variety of types of matrices
+ using standard matrix operations.
+ Emphasis is on the kind of operations needed in statistical calculations
+ such as least squares, linear equation solve and eigenvalues.
+ .
+ Newmat supports matrix types: Matrix (rectangular matrix);
+ UpperTriangularMatrix; LowerTriangularMatrix; DiagonalMatrix;
+ SymmetricMatrix; BandMatrix; UpperBandMatrix; LowerBandMatrix;
+ SymmetricBandMatrix; IdentityMatrix;
+ RowVector; ColumnVector.
+ .
+ Only one element type (float or double) is supported (default is double).
+ .
+ The library includes the operations *, +, -, *=, +=, -=, Kronecker product,
+ Schur product, concatenation, inverse, transpose, conversion between types,
+ submatrix, determinant, Cholesky decomposition, QR triangularisation,
+ singular value decomposition, eigenvalues of a symmetric matrix, sorting,
+ fast Fourier and trig. transforms and printing.
+
+Package: libnewmat10-dev
+Provides: libnewmat-dev
+Section: libdevel
+Architecture: any
+Depends: libnewmat10ldbl (= ${binary:Version}), ${misc:Depends}
+Description: matrix manipulations library (C++ headers files)
+ Newmat library is intended for scientists and engineers
+ who need to manipulate a variety of types of matrices
+ using standard matrix operations.
+ Emphasis is on the kind of operations needed in statistical calculations
+ such as least squares, linear equation solve and eigenvalues.
+ .
+ Newmat supports matrix types: Matrix (rectangular matrix);
+ UpperTriangularMatrix; LowerTriangularMatrix; DiagonalMatrix;
+ SymmetricMatrix; BandMatrix; UpperBandMatrix; LowerBandMatrix;
+ SymmetricBandMatrix; IdentityMatrix;
+ RowVector; ColumnVector.
+ .
+ Only one element type (float or double) is supported (default is double).
+ .
+ The library includes the operations *, +, -, *=, +=, -=, Kronecker product,
+ Schur product, concatenation, inverse, transpose, conversion between types,
+ submatrix, determinant, Cholesky decomposition, QR triangularisation,
+ singular value decomposition, eigenvalues of a symmetric matrix, sorting,
+ fast Fourier and trig. transforms and printing.
+ .
+ libnewmat-dev contains static libraries, headers, and some documentation.
+

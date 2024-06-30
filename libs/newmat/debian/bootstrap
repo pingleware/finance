@@ -1,0 +1,15 @@
+#! /bin/sh
+set -xe
+
+aclocal
+libtoolize --force --copy
+libtoolize --ltdl --force --copy
+autoheader
+touch  INSTALL NEWS ChangeLog # COPYING README AUTHORS  # TODO 
+automake --add-missing --copy 
+automake
+autoconf
+
+rm -f config.cache
+
+#eof "$Id: bootstrap -- pcoval $"

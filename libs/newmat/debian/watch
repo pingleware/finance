@@ -1,0 +1,3 @@
+version=3
+http://www.robertnz.net/download.html \
+  ftp/newmat(.*)\.tar\.gz
