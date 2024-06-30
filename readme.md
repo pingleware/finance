@@ -243,5 +243,5 @@ Windows
 Linux
 
 ```
-
+finance-1.0-Linux.sh
 ```
